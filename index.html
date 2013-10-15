@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+  <head>
+    <meta charset="utf-8">
+    <title>HelpScout Feedback</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/css/feedback.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/feedback.js"></script>
+
+  </head>
+  <body>
+
+    <a href="#" onClick="return feedback();"><div id="feedbutton"></div></a>
+	<div id="feedback" style="display:none;">
+		<div class="box" id="feedback-box" style="display:none;">
+
+			<a class="delete" onclick="return close_feedback();" href="#"></a>
+
+			<div class="title">Need help? Have a question?</div>
+
+			<div class="label half">First name</div>
+			<div class="label half">Last name</div>
+
+			<input type="text" id="feedback-name" name="name" class="half" value="" style="margin-left:0px;" />
+			<input type="text" id="feedback-surname" name="surname" class="half" value="" />
+
+			<div class="label">Email</div>
+			<input type="text" id="feedback-email" name="email" value="" />
+
+			<div class="label">Message</div>
+			<textarea id="feedback-msg" name="msg"></textarea>
+
+			<div class="buttons">
+		 		<a href="#feedback" id="feedback-button" onClick="return send_feedback();" class="btn block" style="width: 142px;">Send feedback</a>
+	 		</div>
+		</div>
+	</div>
+
+</body>
+</html>
